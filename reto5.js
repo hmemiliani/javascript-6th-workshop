@@ -5,7 +5,7 @@ function manejarAsincronia(callback, promesa){
         callback("promesa cumplida, callback ejecutado");
     }).catch(() => {// asi, si la promesa no se cumple entra al catch
         callback("¡Promesa rechazada!");
-      });;
+    });;
 }
 
 //5.2: Crear la Promesa: 
