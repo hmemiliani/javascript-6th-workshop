@@ -10,7 +10,7 @@ function crearSumador(num){
 //3.2 Uso de la Función y Observación de Closures
 
 let sumarNueve = crearSumador(9);
-
+console.log(sumarNueve); //muestra la funcion
 console.log(sumarNueve(6));
 
 //3.3 Ejecución y Análisis:
