@@ -1,0 +1,24 @@
+Reto 10 - Respondiendo preguntas
+
+1. ¿Que tareas se consideran macrotareas y cuales son microtareas?
+R./
+   - Macrotareas: Los `setTimeout` se consideran macrotareas.
+   - Microtareas: Las promesas (`Promise.resolve().then()`) y cualquier codigo dentro de ellas se consideran microtareas.
+
+
+
+2. ¿Como se relacionan las macrotareas y microtareas con el event loop?
+R./
+   - El Event Loop es responsable de manejar la ejecucion de tareas asincronas en JavaScript. Las macrotareas (como `setTimeout`) se colocan en la cola de macrotareas, mientras que las microtareas (como las promesas) se colocan en la cola de microtareas. El Event Loop prioriza la ejecucion de microtareas sobre macrotareas.
+
+
+
+3. ¿Que sucede cuando una microtarea genera una nueva macrotarea dentro de ella?
+R./
+   - Cuando una microtarea (como una promesa) genera una nueva macrotarea (como un `setTimeout` dentro de una promesa), esta nueva macrotarea se colocara en la cola de macrotareas, pero se ejecutara despues de que todas las microtareas pendientes se completen.
+
+
+
+4. ¿Como se manejan las promesas y los setTimeout en relacion con el event loop?
+R./
+   - Las promesas se resuelven de forma asincrona, y sus `then()` se colocan en la cola de microtareas. Por otro lado, `setTimeout` establece una tarea para ejecutarse en el futuro, y estas se colocan en la cola de macrotareas.
